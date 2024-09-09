@@ -25,7 +25,7 @@ Load the query results into a Pandas DataFrame. Explicitly set the column names.
 Sort the DataFrame values by "date".
 
 Plot the results by using the DataFrame plot method, as the following image shows:
-
+![precipitation](https://github.com/user-attachments/assets/fda7d492-1d53-42b5-bca2-4cfd9866d91d)
 
 
 Use Pandas to print the summary statistics for the precipitation data.
@@ -49,9 +49,11 @@ Filter by the station that has the greatest number of observations.
 Query the previous 12 months of TOBS data for that station.
 
 Plot the results as a histogram with bins=12, as the following image shows:
+![station-histogram](https://github.com/user-attachments/assets/f9a34b61-0a52-4c65-97f0-9b1dcdc06776)
 
 
-Part 2: Design Your Climate App
+# Part 2: Design Your Climate App
+
 Now that you’ve completed your initial analysis, you’ll design a Flask API based on the queries that you just developed. To do so, use Flask to create your routes as follows:
 
 /
