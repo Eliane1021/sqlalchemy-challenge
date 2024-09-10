@@ -163,9 +163,9 @@ def Start_end_date(start, end):
     for min, avg, max in start_end_date_results:
         start_end_date_dict = {}
         start_end_date_dict["Date"] = date
-        start_end_date_dict["min_temp"] = min
-        start_end_date_dict["avg_temp"] = avg
-        start_end_date_dict["max_temp"] = max
+        start_end_date_dict["min_tobs"] = min
+        start_end_date_dict["avg_tobs"] = avg
+        start_end_date_dict["max_tobs"] = max
         start_end_date_values.append(start_end_date_dict) 
     
 
