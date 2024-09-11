@@ -146,13 +146,11 @@ def start(start):
 def Start_end_date(start, end):
     session = Session(engine)
 
-    cal = [Measurement.date, func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)]
+    
 
-    start_end_date_results =  (session.query(*cal)
-                       .filter(func.strftime("%Y-%m-%d", Measurement.date) >= start)
-                       .filter(func.strftime("%Y-%m-%d", Measurement.date) <= end)
-                       .group_by(Measurement.date)
-                       .all())
+    start_end_date_results =  session.query(func.min(Measurement.tobs), func.avg(Measurement.tobs), func.max(Measurement.tobs)).\
+        filter(Measurement.date >= start).\
+        filter(Measurement.date <= end).all()
 
     
 
